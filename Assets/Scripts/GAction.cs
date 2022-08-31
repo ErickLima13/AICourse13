@@ -11,7 +11,7 @@ public abstract class GAction : MonoBehaviour
     public float duration;
 
     public GameObject target;
-    public GameObject targetTag;
+    public string targetTag;
     
     public WorldState[] preConditions;
     public WorldState[] afterEffects;
