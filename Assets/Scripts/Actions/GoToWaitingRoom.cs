@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoToHospital : GAction
+public class GoToWaitingRoom : GAction
 {
     public override bool PrePerform()
     {
