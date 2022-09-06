@@ -10,8 +10,4 @@ public class Nurse : GAgent
         SubGoal s1 = new("treatPatient", 1, true);
         goals.Add(s1, 3);
     }
-
-
-
-
 }

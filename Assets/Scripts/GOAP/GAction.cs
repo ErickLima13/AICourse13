@@ -23,17 +23,21 @@ public abstract class GAction : MonoBehaviour
 
     public WorldStates agentBeliefs;
 
+    public GInventory inventory;
+
     public bool running;
 
     public GAction()
     {
         preconditions = new();
         effects = new();
+        
     }
 
     public void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        inventory = GetComponent<GAgent>().inventory;
 
         if(preConditions != null)
         {

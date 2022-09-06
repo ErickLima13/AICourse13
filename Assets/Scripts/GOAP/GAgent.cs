@@ -23,10 +23,12 @@ public class GAgent : MonoBehaviour
 
     private bool invoked;
 
+    private GPlanner planner;
+
     public List<GAction> actions = new();
     public Dictionary<SubGoal, int> goals = new();
 
-    GPlanner planner;
+    public GInventory inventory = new();
 
     public GAction currentAction;
 
