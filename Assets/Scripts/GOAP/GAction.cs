@@ -25,6 +25,8 @@ public abstract class GAction : MonoBehaviour
 
     public GInventory inventory;
 
+    public WorldStates beliefs;
+
     public bool running;
 
     public GAction()
@@ -38,6 +40,7 @@ public abstract class GAction : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         inventory = GetComponent<GAgent>().inventory;
+        beliefs = GetComponent<GAgent>().beliefs;
 
         if(preConditions != null)
         {

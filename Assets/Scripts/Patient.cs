@@ -9,6 +9,10 @@ public class Patient : GAgent
         base.Start();
         SubGoal s1 = new("isWaiting", 1, true);
         goals.Add(s1, 3);
+
+
+        SubGoal s2 = new("isTreated", 1, true);
+        goals.Add(s2, 5);
     }
 
 

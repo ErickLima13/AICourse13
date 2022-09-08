@@ -30,6 +30,8 @@ public class GAgent : MonoBehaviour
 
     public GInventory inventory = new();
 
+    public WorldStates beliefs = new();
+
     public GAction currentAction;
 
 
@@ -69,7 +71,7 @@ public class GAgent : MonoBehaviour
 
             foreach (KeyValuePair<SubGoal, int> sg in sortedGoals)
             {
-                actionQueue = planner.plan(actions, sg.Key.sgoals, null);
+                actionQueue = planner.plan(actions, sg.Key.sgoals, beliefs);
 
                 if (actionQueue != null)
                 {
