@@ -37,6 +37,7 @@ public class GetPatient : GAction
     {
         GWorld.Instance.GetWorld().ModifyState("Waiting", -1);
 
+
         if (target)
         {
             target.GetComponent<GAgent>().inventory.AddItem(resource);

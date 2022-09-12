@@ -6,24 +6,22 @@ public class GoToCubicle : GAction
 {
     public override bool PrePerform()
     {
-        //GameObject cubicle = GameObject.FindGameObjectWithTag("Cubicle");
-        //GWorld.Instance.AddCubicles(cubicle);
+        target = inventory.FindItemWithTag("Cubicle");
 
-        //target = GWorld.Instance.RemoveCubicle();
-
-        //if (target == null)
-        //{
-        //    return false;
-        //}
-
+        if (target == null)
+        {
+            return false;
+        }
 
         return true;
     }
 
     public override bool PostPerform()
     {
-       
-
+        GWorld.Instance.GetWorld().ModifyState("TreatingPatient", 1);
+        GWorld.Instance.AddCubicle(target);
+        inventory.RemoveItem(target);
+        GWorld.Instance.GetWorld().ModifyState("FreeCubicle", 1);
         return true;
     }
 }

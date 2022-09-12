@@ -15,7 +15,7 @@ public class GInventory
     {
         foreach(GameObject i in items)
         {
-            if(i.tag == tag)
+            if(i.CompareTag(tag))
             {
                 return i;
             }
