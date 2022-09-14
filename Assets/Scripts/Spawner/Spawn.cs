@@ -9,6 +9,7 @@ public class Spawn : MonoBehaviour
     public int numPatients;
 
     public int count;
+    public int speedTime;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,8 @@ public class Spawn : MonoBehaviour
         }
 
         Invoke(nameof(SpawnPatient), 5);
+
+        Time.timeScale = speedTime;
     }
 
     // Update is called once per frame

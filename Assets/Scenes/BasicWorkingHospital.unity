@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5f2314f7955bf4c198b8df8eeeb0c822, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3c6663706708233428ed976b5b7fb8a4, type: 2}
 --- !u!1 &34730032
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a1540165db700428c5ea56476e242d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actioName: Get Patient
+  actioName: GetPatient
   cost: 1
   duration: 2
   target: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &199253380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +318,7 @@ MonoBehaviour:
   patientPrefab: {fileID: 7881807148865233720}
   numPatients: 5
   count: 0
+  speedTime: 5
 --- !u!65 &199253381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5168,6 +5169,7 @@ GameObject:
   - component: {fileID: 156335538}
   - component: {fileID: 2618188073743784488}
   - component: {fileID: 156335539}
+  - component: {fileID: 2618188073743784489}
   m_Layer: 0
   m_Name: NurseCode
   m_TagString: Untagged
@@ -5189,7 +5191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actioName: Go To Cubicle
   cost: 1
-  duration: 0
+  duration: 8
   target: {fileID: 0}
   targetTag: 
   preConditions:
@@ -5200,6 +5202,19 @@ MonoBehaviour:
     value: 0
   agent: {fileID: 0}
   running: 0
+--- !u!114 &2618188073743784489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073743784487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3def950bfff4b41a3e666fc43dd0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisAgent: {fileID: 156335539}
 --- !u!1 &2629889911886004786
 GameObject:
   m_ObjectHideFlags: 0
@@ -5768,10 +5783,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7881807148865233729, guid: 72123b7867253eb45b2e60a6c4b36817, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1184113935}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72123b7867253eb45b2e60a6c4b36817, type: 3}
 --- !u!23 &4570400420684509400
