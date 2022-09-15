@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoToHome : GAction
+public class Rest : GAction
 {
     public override bool PrePerform()
     {
@@ -11,11 +11,8 @@ public class GoToHome : GAction
 
     public override bool PostPerform()
     {
-        SpawnerPool.pool.Release(gameObject);
-        print("fui pra casa");
-        //gameObject.SetActive(false);
-        
+        GWorld.Instance.GetWorld().ModifyState("breakTime", 1);
+        beliefs.RemoveState("exhausted");
         return true;
     }
-
 }
